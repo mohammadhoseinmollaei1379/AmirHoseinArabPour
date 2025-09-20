@@ -5,7 +5,7 @@ print("""name [version 1.0]
 name_prompt = input("Please enter your prompt name :")
 y = 0
 while y == 0:
-    user_input = input(f"C:\{name_prompt}>")
+    user_input = input(f"C:\\{name_prompt}>")
     if user_input == "halt" or user_input == "shut down" or user_input == "khamoosh" or user_input == "shutdown":
         print("""See you later...""")
         break
