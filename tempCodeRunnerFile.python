@@ -1,3 +1,0 @@
-celsius_temps = [0, 10, 25, 35]
-
-print(list(map(lambda c: (c * 9/5) + 32, celsius_temps)))
