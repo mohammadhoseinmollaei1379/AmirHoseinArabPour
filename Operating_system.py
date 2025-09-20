@@ -26,4 +26,3 @@ while y == 0:
             print(Style.RESET_ALL + "This is reset text")
         else:
             print(Style.RESET_ALL + "Sorry, this color is not supported.")
-    
