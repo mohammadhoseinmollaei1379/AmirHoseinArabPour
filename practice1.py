@@ -1,22 +1,17 @@
 class Dog:
-    species = "canis"
-    def __init__(self, name, age, species):
-        self.sound = "woof!"
+    def __init__(self, name, age):
         self.name = name
         self.age = age
-        self.species = species
-    def bark(self):
-        print(self.sound)
 
-dog_dog = Dog("dog", 2, "body")
+    @classmethod
+    def from_birth_year(cls, birth_year, current_year):
+        age = current_year - birth_year
+        return cls("Rex", age)
 
-print(
-    "sound : ", dog_dog.sound,
-    "name : ", dog_dog.name,
-    "age : ", dog_dog.age,
-    "feature : ", dog_dog.species
-)
+    def __str__(self):
+        return f"{self.name}, {self.age} years old"
 
 
 
-
+dog1 = Dog.from_birth_year(2018, 21111)  
+print(dog1) 
