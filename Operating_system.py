@@ -34,7 +34,7 @@ while y == 0:
                     files += 1
                 elif entry.is_dir():
                     dirs += 1
-        print(f"files :{files}, folders :{dirs}")
+        print(f"folders :{files}, files :{dirs}")
     elif user_input == "Game" or user_input == "game" or user_input == "bazi" or user_input == "bazy":
         pass
     elif user_input.startswith("echo "):
