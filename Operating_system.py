@@ -5,7 +5,7 @@ name_prompt = input("Please enter your prompt name :")
 y = 0
 while y == 0:
     user_input = input(f"C:\\{name_prompt}>")
-    if user_input == "halt" or user_input == "shut down" or user_input == "khamoosh" or user_input == "shutdown" or user_input == "kamosh" or user_input == "poweroff":
+    if user_input == "halt" or user_input == "shut down" or user_input == "khamoosh" or user_input == "shutdown" or user_input == "kamosh" or user_input == "poweroff" or user_input == "off":
         print("""See you later...""")
         break
     elif user_input == "cls" or user_input == "clear" or user_input == "pak" or user_input == "pac":
@@ -37,3 +37,8 @@ while y == 0:
         print(f"files :{files}, folders :{dirs}")
     elif user_input == "Game" or user_input == "game" or user_input == "bazi" or user_input == "bazy":
         pass
+    elif user_input.startswith("echo "):
+        print(user_input[5:])
+        if user_input == "echo":
+            print()
+        
