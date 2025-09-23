@@ -1,5 +1,6 @@
 import os
 from colorama import init, Fore, Style
+import shutil
 print("new shell [version 1.0] \nname corporation")
 name_prompt = input("Please enter your prompt name :")
 y = 0
@@ -41,4 +42,17 @@ while y == 0:
         print(user_input[5:])
         if user_input == "echo":
             print()
-        
+    elif user_input == "rd" or user_input == "rmdir" or user_input == "rm" or user_input == "Remove-Item" or user_input == "del":
+        folder_path = input("Please enter the directory or file name :")
+        if os.path.exists(folder_path):
+            confirm = input(f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
+            if confirm == "Y":
+                shutil.rmtree(folder_path)
+                print("Folder deleted successfully.")
+            else:
+                print("Deletion canceled.")
+        else:
+            print("Folder does not exist.")
+    elif user_input == "newprompt" or user_input == "new prompt" or user_input == "New Prompt" or user_input == "Prompt" or user_input == "prompt":
+        name_prompt = input("Please enter your new prompt name :")
+    
