@@ -6,8 +6,9 @@ name_prompt = input("Please enter your prompt name :")
 y = 0
 while y == 0:
     user_input = input(f"C:\\{name_prompt}>")
+    user_input = user_input.lower()
     if user_input == "halt" or user_input == "shut down" or user_input == "khamoosh" or user_input == "shutdown" or user_input == "kamosh" or user_input == "poweroff" or user_input == "off":
-        print("""See you later...""")
+        print("See you later...")
         break
     elif user_input == "cls" or user_input == "clear" or user_input == "pak" or user_input == "pac":
         os.system("cls")
@@ -36,23 +37,21 @@ while y == 0:
                 elif entry.is_dir():
                     dirs += 1
         print(f"folders :{files}, files :{dirs}")
-    elif user_input == "Game" or user_input == "game" or user_input == "bazi" or user_input == "bazy":
-        pass
     elif user_input.startswith("echo "):
         print(user_input[5:])
         if user_input == "echo":
             print()
-    elif user_input == "rd" or user_input == "rmdir" or user_input == "rm" or user_input == "Remove-Item" or user_input == "del":
+    elif user_input == "rd" or user_input == "rmdir" or user_input == "rm" or user_input == "remove-item" or user_input == "del":
         folder_path = input("Please enter the directory or file name :")
         if os.path.exists(folder_path):
             confirm = input(f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
-            if confirm == "Y":
+            if confirm == "y":
                 shutil.rmtree(folder_path)
                 print("Folder deleted successfully.")
             else:
                 print("Deletion canceled.")
         else:
             print("Folder does not exist.")
-    elif user_input == "newprompt" or user_input == "new prompt" or user_input == "New Prompt" or user_input == "Prompt" or user_input == "prompt":
+    elif user_input == "newprompt" or user_input == "new prompt" or user_input == "prompt":
         name_prompt = input("Please enter your new prompt name :")
     
