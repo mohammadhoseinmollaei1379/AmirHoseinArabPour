@@ -54,4 +54,5 @@ while y == 0:
             print("Folder does not exist.")
     elif user_input == "newprompt" or user_input == "new prompt" or user_input == "prompt":
         name_prompt = input("Please enter your new prompt name :")
-    
+    else:
+        print(f"'{user_input}' is not recognized as an internal or external command")
