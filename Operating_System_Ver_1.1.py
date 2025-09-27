@@ -1,7 +1,7 @@
 import os
 from colorama import init, Fore, Style
 import shutil
-print("Starting New-Shell")
+print("Starting New-Shell...")
 name_prompt = input("Please enter your prompt name :")
 y = 0
 while y == 0:
@@ -18,14 +18,19 @@ while y == 0:
         color = input("Please enter your desired color(red, green, blue, yellow, reset) :")
         if color == "red":
             print(Fore.RED + "This is red text")
+            os.system("cls")
         elif color == "green":
             print(Fore.GREEN + "This is green text")
+            os.system("cls")
         elif color == "blue":
             print(Fore.BLUE + "This is blue text")
+            os.system("cls")
         elif color == "yellow":
             print(Fore.YELLOW + "This is yellow text")
+            os.system("cls")
         elif color == "reset":
             print(Style.RESET_ALL + "This is reset text")
+            os.system("cls")
         else:
             print(Style.RESET_ALL + f"Sorry, this {color} is not supported.")
     elif user_input == "dir" or user_input == "ls":
