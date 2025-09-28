@@ -3,7 +3,7 @@ from colorama import init, Fore, Style
 import shutil
 import datetime
 Ver = "1.1"
-print("Starting New-Shell...")
+print("Starting New-Shell... [Version 1.1]")
 name_prompt = input("Please enter your prompt name :")
 y = 0
 while y == 0:
@@ -14,9 +14,9 @@ while y == 0:
     if user_input == "halt" or user_input == "shutdown" or user_input == "poweroff" or user_input == "off":
         print("See you later...")
         break
-    elif user_input == "cls" or user_input == "clear" or user_input == "clearscreen":
+    elif user_input == "cls" or user_input == "clear" or user_input == "clearscreen" or user_input == "clr":
         os.system("cls")
-    elif user_input == "color" or user_input == "colors":
+    elif user_input == "color":
         init()
         color = input("Please enter your desired color(red, green, blue, yellow, white) :")
         if color == "red":
