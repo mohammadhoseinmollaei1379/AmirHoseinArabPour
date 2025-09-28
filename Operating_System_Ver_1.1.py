@@ -1,6 +1,8 @@
 import os
 from colorama import init, Fore, Style
 import shutil
+import datetime
+Ver = "1.1"
 print("Starting New-Shell...")
 name_prompt = input("Please enter your prompt name :")
 y = 0
@@ -62,9 +64,17 @@ while y == 0:
                 print("Deletion canceled.")
         else:
             print("Folder does not exist.")
-    elif user_input == "newprompt" or user_input == "prompt":
+    elif user_input == "newprompt" or user_input == "prompt" or user_input == "nameprompt":
         name_prompt = input("Please enter your new prompt name :")
     elif user_input == "":
         pass
+    elif user_input == "ver" or user_input == "version":
+        print(Ver)
+    elif user_input == "time":
+        now = datetime.datetime.now().time()
+        print("The current time is :", now)
+    elif user_input == "date":
+        now = datetime.date.today()
+        print("The current date is :", now)
     else:
-        print(f"'{user_input}' is not recognized as an internal or external command")
+        print(f"Command not found. please try 'Help'")
