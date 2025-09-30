@@ -2,9 +2,9 @@ import os
 from colorama import init, Fore, Style
 import shutil
 import datetime
-Ver = "1.1"
 print("Starting New-Shell... [Version 1.1]")
 name_prompt = input("Please enter your prompt name :")
+Ver = "1.1"
 y = 0
 while y == 0:
     user_input = input(f"C:\\{name_prompt}>")
@@ -18,22 +18,28 @@ while y == 0:
         os.system("cls")
     elif user_input == "color":
         init()
-        color = input("Please enter your desired color(red, green, blue, yellow, white) :")
-        if color == "red":
-            print(Fore.RED + "This is red text")
-            os.system("cls")
-        elif color == "green":
-            print(Fore.GREEN + "This is green text")
-            os.system("cls")
-        elif color == "blue":
+        color = user_input[4:]
+        if color == "1":
             print(Fore.BLUE + "This is blue text")
             os.system("cls")
-        elif color == "yellow":
+        elif color == "2":
+            print(Fore.GREEN + "This is green text")
+        elif color == "3":
+            print(Fore.CYAN + "This is aqua text")
+            os.system("cls")
+        elif color == "4":
+            print(Fore.RED + "This is red text")
+            os.system("cls")
+        elif color == "5":
+            print(Fore.MAGENTA + "This is purple text")
+        elif color == "6":
             print(Fore.YELLOW + "This is yellow text")
             os.system("cls")
-        elif color == "white":
+        elif color == "7" or color == "reset":
             print(Style.RESET_ALL + "This is white text")
             os.system("cls")
+        elif color == "9":
+            print(Fore.LIGHTGREEN_EX + "This is light green text")
         else:
             print(Style.RESET_ALL + f"Sorry, this {color} is not supported.")
     elif user_input == "dir" or user_input == "ls":
@@ -46,10 +52,10 @@ while y == 0:
                 elif entry.is_dir():
                     dirs += 1
         print(f"folders :{files}, files :{dirs}")
-    elif user_input == "echo ":
-        print(user_input[5:])
-        if user_input == "echo":
-            print()
+    elif user_input.startswith("echo"):
+        print(user_input[4:])
+        print()
+        user_input.lower()
     elif user_input == "copycon":
         input_1 = input()
         print(input_1)
@@ -76,5 +82,9 @@ while y == 0:
     elif user_input == "date":
         now = datetime.date.today()
         print("The current date is :", now)
+    elif user_input == "mkdir":
+        name_folder = user_input[5:]
+        os.mkdir(name_folder)
+        print("Folder created")
     else:
         print(f"Command not found. please try 'Help'")
