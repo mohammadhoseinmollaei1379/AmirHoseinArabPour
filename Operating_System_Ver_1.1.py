@@ -111,12 +111,12 @@ while y == 0:
         user_input_1 = user_input[3:]
         if user_input_1 == "color":
             print(
-                "1 = Blue",               "9 = Light Blue",
-                "2 = Green",              "A = Light Green",
-                "3 = Aqua",               "B = Light Aqua",
-                "4 = Red",                "C = Light Red",
-                "5 = Purple",             "D = Light Purple",
-                "6 = Yellow",             "E = Light Yellow",
-                "7 = White",              "F = Bright White ")
+                "1 = Blue",           "9 = Light Blue",
+                "2 = Green",          "A = Light Green",
+                "3 = Aqua",           "B = Light Aqua",
+                "4 = Red",            "C = Light Red",
+                "5 = Purple",         "D = Light Purple",
+                "6 = Yellow",         "E = Light Yellow",
+                "7 = White",          "F = Bright White ")
     else:
         print("Command not found. please try 'Help'")
