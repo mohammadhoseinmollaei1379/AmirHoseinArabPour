@@ -16,9 +16,9 @@ while y == 0:
         break
     elif user_input == "cls" or user_input == "clear" or user_input == "clearscreen" or user_input == "clr":
         os.system("cls")
-    elif user_input == "color":
+    elif user_input.startswith("color"):
         init()
-        color = input("Please enter your desired color :")
+        color = user_input[5:]
         if color == "1":
             print(Fore.BLUE + "This is blue text")
             os.system("cls")
@@ -103,20 +103,20 @@ while y == 0:
     elif user_input == "date":
         now = datetime.date.today()
         print("The current date is :", now)
-    elif user_input == "mkdir":
+    elif user_input.startswith("mkdir"):
         name_folder = user_input[5:]
         os.mkdir(name_folder)
         print("Folder created")
-    elif user_input == "help":
-        user_input_1 = user_input[3:]
+    elif user_input.startswith("help"):
+        user_input_1 = user_input[4:]
         if user_input_1 == "color":
             print(
-                "1 = Blue",           "9 = Light Blue",
-                "2 = Green",          "A = Light Green",
-                "3 = Aqua",           "B = Light Aqua",
-                "4 = Red",            "C = Light Red",
-                "5 = Purple",         "D = Light Purple",
-                "6 = Yellow",         "E = Light Yellow",
+                "1 = Blue",           "9 = Light Blue","\n",
+                "2 = Green",          "A = Light Green","\n",
+                "3 = Aqua",           "B = Light Aqua","\n",
+                "4 = Red",            "C = Light Red","\n",
+                "5 = Purple",         "D = Light Purple","\n",
+                "6 = Yellow",         "E = Light Yellow","\n",
                 "7 = White",          "F = Bright White ")
     else:
         print("Command not found. please try 'Help'")
