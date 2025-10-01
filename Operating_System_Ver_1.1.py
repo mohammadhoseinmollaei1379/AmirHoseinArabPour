@@ -24,6 +24,7 @@ while y == 0:
             os.system("cls")
         elif color == "2":
             print(Fore.GREEN + "This is green text")
+            os.system("cls")
         elif color == "3":
             print(Fore.CYAN + "This is aqua text")
             os.system("cls")
@@ -32,6 +33,7 @@ while y == 0:
             os.system("cls")
         elif color == "5":
             print(Fore.MAGENTA + "This is purple text")
+            os.system("cls")
         elif color == "6":
             print(Fore.YELLOW + "This is yellow text")
             os.system("cls")
@@ -39,9 +41,28 @@ while y == 0:
             print(Style.RESET_ALL + "This is white text")
             os.system("cls")
         elif color == "9":
+            print(Fore.LIGHTBLUE_EX + "This is light blue text")
+            os.system("cls")
+        elif color == "a":
             print(Fore.LIGHTGREEN_EX + "This is light green text")
+            os.system("cls")
+        elif color == "b":
+            print(Fore.LIGHTCYAN_EX + "This is light aqua text")
+            os.system("cls")
+        elif color == "c":
+            print(Fore.LIGHTRED_EX + "This is light red text")
+            os.system("cls")
+        elif color == "d":
+            print(Fore.LIGHTMAGENTA_EX + "This is light purple text")
+            os.system("cls")
+        elif color == "e":
+            print(Fore.LIGHTYELLOW_EX + "This is light purple text")
+            os.system("cls")
+        elif color == "f":
+            print(Fore.LIGHTWHITE_EX + "This is bright white text")
         else:
             print(Style.RESET_ALL + f"Sorry, this {color} is not supported.")
+            os.system("cls")
     elif user_input == "dir" or user_input == "ls":
         path = input("Please enter the directory name :")
         files = dirs = 0
@@ -86,5 +107,16 @@ while y == 0:
         name_folder = user_input[5:]
         os.mkdir(name_folder)
         print("Folder created")
+    elif user_input == "help":
+        user_input_1 = user_input[3:]
+        if user_input_1 == "color":
+            print(
+                "1 = Blue",               "9 = Light Blue",
+                "2 = Green",              "A = Light Green",
+                "3 = Aqua",               "B = Light Aqua",
+                "4 = Red",                "C = Light Red",
+                "5 = Purple",             "D = Light Purple",
+                "6 = Yellow",             "E = Light Yellow",
+                "7 = White",              "F = Bright White ")
     else:
-        print(f"Command not found. please try 'Help'")
+        print("Command not found. please try 'Help'")
