@@ -1,5 +1,5 @@
 import os
-from colorama import init, Fore, Style
+from colorama import init, Fore
 import shutil
 import datetime
 print("Starting New-Shell... [Version 1.1]")
@@ -18,7 +18,7 @@ while y == 0:
         os.system("cls")
     elif user_input == "color":
         init()
-        color = user_input[4:]
+        color = input("Please enter your desired color :")
         if color == "1":
             print(Fore.BLUE + "This is blue text")
             os.system("cls")
@@ -38,7 +38,7 @@ while y == 0:
             print(Fore.YELLOW + "This is yellow text")
             os.system("cls")
         elif color == "7" or color == "reset":
-            print(Style.RESET_ALL + "This is white text")
+            print(Fore.WHITE + "This is white text")
             os.system("cls")
         elif color == "9":
             print(Fore.LIGHTBLUE_EX + "This is light blue text")
@@ -61,7 +61,7 @@ while y == 0:
         elif color == "f":
             print(Fore.LIGHTWHITE_EX + "This is bright white text")
         else:
-            print(Style.RESET_ALL + f"Sorry, this {color} is not supported.")
+            print(Fore.WHITE + f"Sorry, this {color} is not supported.")
             os.system("cls")
     elif user_input == "dir" or user_input == "ls":
         path = input("Please enter the directory name :")
