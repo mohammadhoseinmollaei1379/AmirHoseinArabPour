@@ -75,12 +75,10 @@ while y == 0:
         print(f"folders :{files}, files :{dirs}")
     elif user_input.startswith("echo"):
         print(user_input[4:])
-        print()
-        user_input.lower()
     elif user_input == "copycon":
         input_1 = input()
         print(input_1)
-    elif user_input == "rd" or user_input == "rm" or user_input == "removeitem" or user_input == "del":
+    elif user_input == "rd" or user_input == "rm" or user_input == "removeitem":
         folder_path = input("Please enter the directory or file name :")
         if os.path.exists(folder_path):
             confirm = input(f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
