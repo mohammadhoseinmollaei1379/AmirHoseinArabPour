@@ -90,7 +90,7 @@ while y == 0:
     elif user_input == "date":
         now = datetime.date.today()
         print("The current date is :", now)
-    elif user_input.startswith("mkdir"):
+    elif user_input.startswith("mkdir") or user_input.startswith("md"):
         name_folder = user_input[5:]
         os.mkdir(name_folder)
         print("Folder created")
