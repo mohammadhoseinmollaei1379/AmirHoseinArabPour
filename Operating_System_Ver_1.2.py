@@ -58,7 +58,7 @@ while y == 0:
                     files += 1
                 elif entry.is_dir():
                     dirs += 1
-        print(f"folders :{files}, files :{dirs}")
+        print(f"folders : {files}, files : {dirs}")
     elif user_input.startswith("echo"):
         print(user_input[4:])
     elif user_input == "copycon":
@@ -96,7 +96,7 @@ while y == 0:
         print("Folder created")
     elif user_input.startswith("help"):
         user_input_1 = user_input[4:]
-        if user_input_1 == "color":
+        if user_input_1 == "color" or user_input_1 == "color/?":
             print(
                "","1 = Blue","           ","9 = Light Blue","\n",
                 "2 = Green","          ","A = Light Green","\n",
@@ -105,5 +105,17 @@ while y == 0:
                 "5 = Purple","         ","D = Light Purple","\n",
                 "6 = Yellow","         ","E = Light Yellow","\n",
                 "7 = White","          ","F = Bright White ")
+        elif user_input_1 == "dir" or user_input_1 == "dir/?" or user_input_1 == "ls":
+            print("Displays a list of files and subdirectories in a directory.")
+        elif user_input_1 == "time" or user_input_1 == "time/?":
+            print("Displays system time.")
+        elif user_input_1 == "date" or user_input_1 == "date/?":
+            print("Displays system date.")
+        elif user_input_1 == "cls":
+            print("Clears the screen.")
+        elif user_input_1 == "echo" or user_input_1 == "copycon":
+            print("Displays messages, or turns command-echoing on or off.")
+        elif user_input_1 == "md" or user_input_1 == "mkdir":
+            print("Creates a directory.")
     else:
         print("Command not found. please try 'Help'")
