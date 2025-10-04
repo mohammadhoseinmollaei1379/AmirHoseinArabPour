@@ -5,8 +5,7 @@ import datetime
 print("Starting New-Shell... [Version 1.2]")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.2"
-y = 0
-while y == 0:
+while True:
     user_input = input(f"C:\\{name_prompt}>")
     user_input = user_input.lower()
     user_input = user_input.replace(" ", "")
@@ -94,6 +93,8 @@ while y == 0:
         name_folder = user_input[5:]
         os.mkdir(name_folder)
         print("Folder created")
+    elif user_input.startswith("cd"):
+        name_prompt = user_input[2:]
     elif user_input.startswith("help"):
         user_input_1 = user_input[4:]
         if user_input_1 == "color" or user_input_1 == "color/?":
