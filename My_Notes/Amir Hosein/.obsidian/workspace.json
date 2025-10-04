@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "9032754295a699d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7ac081759e1953b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "057d8a690db54b84",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "مسیر یادگیری/برنامه جامع 2(اصلی).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "برنامه جامع 2(اصلی)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "640ed1ff331bcbdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "5dfc4c6b932534f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "acae36a9391d95da",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1b7c5b0fca314b10",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "14bccd352f227182",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 204.5
+  },
+  "right": {
+    "id": "1189df0f9acca2b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "56f6d654a12912e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "661392e0292e7a65",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "دستور کار جلسه.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for دستور کار جلسه"
+            }
+          },
+          {
+            "id": "f50708696ceea296",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "دستور کار جلسه.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from دستور کار جلسه"
+            }
+          },
+          {
+            "id": "db1aab4cb144273c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d355cf0ad814a905",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "دستور کار جلسه.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of دستور کار جلسه"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "057d8a690db54b84",
+  "lastOpenFiles": [
+    "مسیر یادگیری/برنامه جامع 1.md",
+    "مسیر یادگیری/برنامه جامع 2(اصلی).md",
+    "دستور کار جلسه.md",
+    "مسیر یادگیری",
+    "Welcome.md"
+  ]
+}
