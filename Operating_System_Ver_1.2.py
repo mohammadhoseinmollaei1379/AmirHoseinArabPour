@@ -2,6 +2,10 @@ import os
 from colorama import init, Fore
 import shutil
 import datetime
+from tqdm import tqdm
+from time import sleep
+for i in tqdm(range(20)):
+    sleep(0.2)
 print("Starting New-Shell... [Version 1.2]")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.2"
@@ -83,12 +87,12 @@ while True:
         pass
     elif user_input == "ver" or user_input == "version":
         print(Ver)
-    elif user_input == "time":
-        now = datetime.datetime.now().time()
-        print("The current time is :", now)
+    elif user_input == "time" or user_input == "time/t":
+        time = datetime.datetime.now().time()
+        print("The current time is :", time)
     elif user_input == "date":
-        now = datetime.date.today()
-        print("The current date is :", now)
+        date = datetime.date.today()
+        print("The current date is :", date)
     elif user_input.startswith("mkdir") or user_input.startswith("md"):
         name_folder = user_input[5:]
         os.mkdir(name_folder)
