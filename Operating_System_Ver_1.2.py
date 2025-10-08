@@ -4,7 +4,7 @@ import shutil
 import datetime
 from tqdm import tqdm
 from time import sleep
-for i in tqdm(range(20)):
+for i in tqdm(range(100)):
     sleep(0.2)
 print("Starting New-Shell... [Version 1.2]")
 name_prompt = input("Please enter your prompt name :")
@@ -61,7 +61,7 @@ while True:
                     files += 1
                 elif entry.is_dir():
                     dirs += 1
-        print(f"folders : {files}, files : {dirs}")
+        print(f"folders : {dirs}, files : {files}")
     elif user_input.startswith("echo"):
         print(user_input[4:])
     elif user_input == "copycon":
@@ -94,7 +94,10 @@ while True:
         date = datetime.date.today()
         print("The current date is :", date)
     elif user_input.startswith("mkdir") or user_input.startswith("md"):
-        name_folder = user_input[5:]
+        if user_input == "mkdir":
+            name_folder = user_input[5:]
+        else:
+            name_folder = user_input[2:]
         os.mkdir(name_folder)
         print("Folder created")
     elif user_input.startswith("cd"):
@@ -102,8 +105,7 @@ while True:
     elif user_input.startswith("help"):
         user_input_1 = user_input[4:]
         if user_input_1 == "color" or user_input_1 == "color/?":
-            print(
-               "","1 = Blue","           ","9 = Light Blue","\n",
+            print("","1 = Blue","           ","9 = Light Blue","\n",
                 "2 = Green","          ","A = Light Green","\n",
                 "3 = Aqua","           ","B = Light Aqua","\n",
                 "4 = Red","            ","C = Light Red","\n",
