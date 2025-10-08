@@ -4,8 +4,8 @@ import shutil
 import datetime
 from tqdm import tqdm
 from time import sleep
-for i in tqdm(range(100)):
-    sleep(0.2)
+for i in tqdm(range(100),ascii = "-█", colour = "cyan"):
+    sleep(0.1)
 print("Starting New-Shell... [Version 1.2]")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.2"
@@ -17,7 +17,7 @@ while True:
     if user_input == "halt" or user_input == "shutdown":
         print("See you later...")
         break
-    elif user_input == "cls" or user_input == "clear" or user_input == "clearscreen" or user_input == "clr":
+    elif user_input == "cls" or user_input == "clear":
         os.system("cls")
     elif user_input.startswith("color"):
         init()
@@ -50,7 +50,7 @@ while True:
             print(Fore.LIGHTYELLOW_EX + "This is light yellow text")
         elif color == "f":
             print(Fore.LIGHTWHITE_EX + "This is bright white text")
-        else:
+        elif not user_input == "color/?":
             print(Fore.WHITE + f"Sorry, this {color} is not supported.")
     elif user_input == "dir" or user_input == "ls":
         path = input("Please enter the directory name :")
@@ -103,8 +103,9 @@ while True:
     elif user_input.startswith("cd"):
         name_prompt = user_input[2:]
     elif user_input.startswith("help"):
+        user_input = user_input
         user_input_1 = user_input[4:]
-        if user_input_1 == "color" or user_input_1 == "color/?":
+        if user_input_1 == "color" or user_input == "color/?":
             print("","1 = Blue","           ","9 = Light Blue","\n",
                 "2 = Green","          ","A = Light Green","\n",
                 "3 = Aqua","           ","B = Light Aqua","\n",
