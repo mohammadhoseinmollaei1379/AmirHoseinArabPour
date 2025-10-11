@@ -22,36 +22,37 @@ while True:
     elif user_input.startswith("color"):
         init()
         color = user_input[5:]
-        if color == "1":
-            print(Fore.BLUE + "This is blue text")
-        elif color == "2":
-            print(Fore.GREEN + "This is green text")
-        elif color == "3":
-            print(Fore.CYAN + "This is aqua text")
-        elif color == "4":
-            print(Fore.RED + "This is red text")
-        elif color == "5":
-            print(Fore.MAGENTA + "This is purple text")
-        elif color == "6":
-            print(Fore.YELLOW + "This is yellow text")
-        elif color == "7":
-            print(Fore.RESET + "This is white text")
-        elif color == "9":
-            print(Fore.LIGHTBLUE_EX + "This is light blue text")
-        elif color == "a":
-            print(Fore.LIGHTGREEN_EX + "This is light green text")
-        elif color == "b":
-            print(Fore.LIGHTCYAN_EX + "This is light aqua text")
-        elif color == "c":
-            print(Fore.LIGHTRED_EX + "This is light red text")
-        elif color == "d":
-            print(Fore.LIGHTMAGENTA_EX + "This is light purple text")
-        elif color == "e":
-            print(Fore.LIGHTYELLOW_EX + "This is light yellow text")
-        elif color == "f":
-            print(Fore.LIGHTWHITE_EX + "This is bright white text")
-        elif not user_input == "color/?":
-            print(Fore.WHITE + f"Sorry, this {color} is not supported.")
+        if color != "/?":
+            if color == "1":
+                print(Fore.BLUE + "This is blue text")
+            elif color == "2":
+                print(Fore.GREEN + "This is green text")
+            elif color == "3":
+                print(Fore.CYAN + "This is aqua text")
+            elif color == "4":
+                print(Fore.RED + "This is red text")
+            elif color == "5":
+                print(Fore.MAGENTA + "This is purple text")
+            elif color == "6":
+                print(Fore.YELLOW + "This is yellow text")
+            elif color == "7":
+                print(Fore.RESET + "This is white text")
+            elif color == "9":
+                print(Fore.LIGHTBLUE_EX + "This is light blue text")
+            elif color == "a":
+                print(Fore.LIGHTGREEN_EX + "This is light green text")
+            elif color == "b":
+                print(Fore.LIGHTCYAN_EX + "This is light aqua text")
+            elif color == "c":
+                print(Fore.LIGHTRED_EX + "This is light red text")
+            elif color == "d":
+                print(Fore.LIGHTMAGENTA_EX + "This is light purple text")
+            elif color == "e":
+                print(Fore.LIGHTYELLOW_EX + "This is light yellow text")
+            elif color == "f":
+                print(Fore.LIGHTWHITE_EX + "This is bright white text")
+            elif not user_input == "color/?":
+                print(Fore.WHITE + f"Sorry, this {color} is not supported.")
     elif user_input == "dir" or user_input == "ls":
         path = input("Please enter the directory name :")
         files = dirs = 0
