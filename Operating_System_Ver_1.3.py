@@ -4,7 +4,7 @@ import shutil
 import datetime
 from tqdm import tqdm
 from time import sleep
-for i in tqdm(range(100),ascii = "-█", colour = "cyan"):
+for i in tqdm(range(100),ascii = "▒▒▒█", colour = "cyan"):
     sleep(0.05)
 print("Starting New-Shell... [Version 1.2]")
 name_prompt = input("Please enter your prompt name :")
@@ -58,15 +58,19 @@ while True:
                 "7 = White","          ","F = Bright White ")
         else:
             print(Fore.WHITE + f"Sorry, this {color} is not supported.")
-    elif user_input == "dir" or user_input == "ls":
-        path = input("Please enter the directory name :")
+    elif user_input.startswith("dir") or user_input.startswith("ls"):
+        user_input_1 = (user_input[3:])
+        path = ("C:\\")
         files = dirs = 0
-        with os.scandir(path) as entries:
-            for entry in entries:
-                if entry.is_file():
-                    files += 1
-                elif entry.is_dir():
-                    dirs += 1
+        if not user_input_1 == "dir/?":
+            with os.scandir(path) as entries:
+                for entry in entries:
+                    if entry.is_file():
+                        files += 1
+                    elif entry.is_dir():
+                        dirs += 1
+        elif user_input == "dir/?":
+            print("Displays a list of files and subdirectories in a directory.")
         print(f"folders : {dirs}, files : {files}")
     elif user_input.startswith("echo"):
         print(user_input[4:])
@@ -110,8 +114,8 @@ while True:
         name_prompt = user_input[2:]
     elif user_input.startswith("help"):
         user_input = user_input
-        user_input_1 = user_input[4:]
-        if user_input_1 == "color" or user_input == "color/?":
+        user_input_2 = user_input[4:]
+        if user_input_2 == "color":
             print("","1 = Blue","           ","9 = Light Blue","\n",
                 "2 = Green","          ","A = Light Green","\n",
                 "3 = Aqua","           ","B = Light Aqua","\n",
@@ -119,17 +123,17 @@ while True:
                 "5 = Purple","         ","D = Light Purple","\n",
                 "6 = Yellow","         ","E = Light Yellow","\n",
                 "7 = White","          ","F = Bright White ")
-        elif user_input_1 == "dir" or user_input_1 == "dir/?" or user_input_1 == "ls":
+        elif user_input_2 == "dir" or user_input_2 == "ls":
             print("Displays a list of files and subdirectories in a directory.")
-        elif user_input_1 == "time" or user_input_1 == "time/?":
+        elif user_input_2 == "time" or user_input_2 == "time/?":
             print("Displays system time.")
-        elif user_input_1 == "date" or user_input_1 == "date/?":
+        elif user_input_2 == "date" or user_input_2 == "date/?":
             print("Displays system date.")
-        elif user_input_1 == "cls":
+        elif user_input_2 == "cls":
             print("Clears the screen.")
-        elif user_input_1 == "echo" or user_input_1 == "copycon":
+        elif user_input_2 == "echo" or user_input_2 == "copycon":
             print("Displays messages, or turns command-echoing on or off.")
-        elif user_input_1 == "md" or user_input_1 == "mkdir":
+        elif user_input_2 == "md" or user_input_2 == "mkdir":
             print("Creates a directory.")
     else:
         print("Command not found. please try 'Help'")
