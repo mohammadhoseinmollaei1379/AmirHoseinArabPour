@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "9032754295a699d7",
+    "id": "9c864a24c7e9c08c",
     "type": "split",
     "children": [
       {
-        "id": "a7ac081759e1953b",
+        "id": "e43ddf0694660232",
         "type": "tabs",
         "children": [
           {
-            "id": "057d8a690db54b84",
+            "id": "2c3aac3b5c5ef27a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "640ed1ff331bcbdf",
+    "id": "fa2832332c46e948",
     "type": "split",
     "children": [
       {
-        "id": "5dfc4c6b932534f4",
+        "id": "2f5d6acd2e6df212",
         "type": "tabs",
         "children": [
           {
-            "id": "acae36a9391d95da",
+            "id": "1f36df6f61319a5e",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "1b7c5b0fca314b10",
+            "id": "eb8af2d318e51e7e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "14bccd352f227182",
+            "id": "05fe6f6e73dad923",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 204.5
+    "width": 300
   },
   "right": {
-    "id": "1189df0f9acca2b8",
+    "id": "f38b23fdfdbb1891",
     "type": "split",
     "children": [
       {
-        "id": "56f6d654a12912e1",
+        "id": "442d3e80346a4952",
         "type": "tabs",
         "children": [
           {
-            "id": "661392e0292e7a65",
+            "id": "6d33e3665e367bfd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "دستور کار جلسه.md",
+                "file": "مسیر یادگیری/برنامه جامع 2(اصلی).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for دستور کار جلسه"
+              "title": "Backlinks for برنامه جامع 2(اصلی)"
             }
           },
           {
-            "id": "f50708696ceea296",
+            "id": "b756a3171fc80fe9",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "دستور کار جلسه.md",
+                "file": "مسیر یادگیری/برنامه جامع 2(اصلی).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from دستور کار جلسه"
+              "title": "Outgoing links from برنامه جامع 2(اصلی)"
             }
           },
           {
-            "id": "db1aab4cb144273c",
+            "id": "98dce3a33cd8f359",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +137,18 @@
             }
           },
           {
-            "id": "d355cf0ad814a905",
+            "id": "9f30e9db699f12b8",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "دستور کار جلسه.md",
+                "file": "مسیر یادگیری/برنامه جامع 2(اصلی).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of دستور کار جلسه"
+              "title": "Outline of برنامه جامع 2(اصلی)"
             }
           }
         ]
@@ -169,12 +169,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "057d8a690db54b84",
+  "active": "2c3aac3b5c5ef27a",
   "lastOpenFiles": [
-    "دستور کار جلسه.md",
     "مسیر یادگیری/برنامه جامع 1.md",
-    "مسیر یادگیری/برنامه جامع 2(اصلی).md",
-    "مسیر یادگیری",
-    "Welcome.md"
+    "مسیر یادگیری/برنامه جامع 2(اصلی).md"
   ]
 }

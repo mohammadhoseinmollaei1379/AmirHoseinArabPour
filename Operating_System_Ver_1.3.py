@@ -4,11 +4,12 @@ import shutil
 import datetime
 from tqdm import tqdm
 from time import sleep
-for i in tqdm(range(100),ascii = "▒▒▒█", colour = "cyan"):
+for i in tqdm(range(100), ascii="▒█", colour="cyan"):
     sleep(0.05)
-print("Starting New-Shell... [Version 1.2]")
+print("Starting New-Shell... [Version 1.3]")
 name_prompt = input("Please enter your prompt name :")
-Ver = "1.2"
+Ver = "1.3"
+help_color = ()
 while True:
     user_input = input(f"C:\\{name_prompt}>")
     user_input = user_input.lower().replace(" ", "").replace("-", "")
@@ -18,6 +19,13 @@ while True:
     elif user_input == "cls" or user_input == "clear":
         os.system("cls")
     elif user_input.startswith("color"):
+        help_color = """1 = Blue           9 = Light Blue
+2 = Green          A = Light Green
+3 = Aqua           B = Light Aqua
+4 = Red            C = Light Red
+5 = Purple         D = Light Purple
+6 = Yellow         E = Light Yellow
+7 = White          F = Bright White"""
         init()
         color = user_input[5:]
         if color == "1":
@@ -49,13 +57,7 @@ while True:
         elif color == "f":
             print(Fore.LIGHTWHITE_EX + "This is bright white text")
         elif user_input == "color/?":
-            print("","1 = Blue","           ","9 = Light Blue","\n",
-                "2 = Green","          ","A = Light Green","\n",
-                "3 = Aqua","           ","B = Light Aqua","\n",
-                "4 = Red","            ","C = Light Red","\n",
-                "5 = Purple","         ","D = Light Purple","\n",
-                "6 = Yellow","         ","E = Light Yellow","\n",
-                "7 = White","          ","F = Bright White ")
+            print(help_color)
         else:
             print(Fore.WHITE + f"Sorry, this {color} is not supported.")
     elif user_input.startswith("dir") or user_input.startswith("ls"):
@@ -80,7 +82,8 @@ while True:
     elif user_input == "rd" or user_input == "rm" or user_input == "removeitem":
         folder_path = input("Please enter the directory or file name :")
         if os.path.exists(folder_path):
-            confirm = input(f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
+            confirm = input(
+                f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
             if confirm == "y":
                 shutil.rmtree(folder_path)
                 print("Folder deleted successfully.")
@@ -116,13 +119,7 @@ while True:
         user_input = user_input
         user_input_2 = user_input[4:]
         if user_input_2 == "color":
-            print("","1 = Blue","           ","9 = Light Blue","\n",
-                "2 = Green","          ","A = Light Green","\n",
-                "3 = Aqua","           ","B = Light Aqua","\n",
-                "4 = Red","            ","C = Light Red","\n",
-                "5 = Purple","         ","D = Light Purple","\n",
-                "6 = Yellow","         ","E = Light Yellow","\n",
-                "7 = White","          ","F = Bright White ")
+            print(help_color)
         elif user_input_2 == "dir" or user_input_2 == "ls":
             print("Displays a list of files and subdirectories in a directory.")
         elif user_input_2 == "time" or user_input_2 == "time/?":
