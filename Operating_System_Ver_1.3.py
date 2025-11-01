@@ -9,7 +9,6 @@ for i in tqdm(range(100), ascii="▒█", colour="cyan"):
 print("Starting New-Shell... [Version 1.3]")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.3"
-help_color = ()
 while True:
     user_input = input(f"C:\\{name_prompt}>")
     user_input = user_input.lower().replace(" ", "").replace("-", "")
@@ -59,7 +58,7 @@ while True:
         elif user_input == "color/?":
             print(help_color)
         else:
-            print(Fore.WHITE + f"Sorry, this {color} is not supported.")
+            print(Fore.WHITE + f"Sorry, this {color} is not supported.", help_color)
     elif user_input.startswith("dir") or user_input.startswith("ls"):
         user_input_1 = (user_input[3:])
         path = ("C:\\")
@@ -119,7 +118,7 @@ while True:
         user_input = user_input
         user_input_2 = user_input[4:]
         if user_input_2 == "color":
-            print(help_color)
+            print(help_color) # type: ignore
         elif user_input_2 == "dir" or user_input_2 == "ls":
             print("Displays a list of files and subdirectories in a directory.")
         elif user_input_2 == "time" or user_input_2 == "time/?":
