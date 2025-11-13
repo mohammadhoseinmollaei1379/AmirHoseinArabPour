@@ -32,7 +32,7 @@ def click():
     ws = wb.active
     try:
         name, family_1, family_2 = content_1.split()
-        ws.append([name, family_1 + family_2, content_2, selected_rd_btn])
+        ws.append([name, family_1, family_2, content_2, selected_rd_btn])
         wb.save("takhfif.xlsx")
     except ValueError:
         error_label = tk.Label(root, text="ورودی باید شامل نام، نام خانوادگی و شماره تلفن باشد.", fg="red", bg="lightblue", font=("B Nazanin", 14))
