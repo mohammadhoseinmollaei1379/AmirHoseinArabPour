@@ -3,10 +3,13 @@ from tkinter import filedialog
 from tkinter import messagebox
 pass_word_ = "123456"
 root_4 = tk.Tk()
-root_4.geometry("200x100+900+200")
-label_4 = tk.Label(root_4, text="رمز خود را وارد کنید", font=("B Nazanin", 18))
+root_4.geometry("200x150+900+200")
+root_4.configure(bg="lightblue")
+root_4.title("ورود به برنامه")
+root_4.resizable(False, False)
+label_4 = tk.Label(root_4, text="رمز خود را وارد کنید", font=("B Nazanin", 18), bg="lightblue")
 label_4.pack()
-entry_4 = tk.Entry(root_4, width=75, font=("B Nazanin", 1))
+entry_4 = tk.Entry(root_4, width=75, font=("B Nazanin", 18))
 entry_4.pack()
 def sign_in():
     content_5 = entry_4.get().strip()
@@ -20,7 +23,7 @@ def pass_word():
     if content_4 == pass_word_:
         root_4.withdraw()
         root = tk.Toplevel()
-        root.title("مرتب کردن اسامی کارمندان")
+        root.title("دفترچۀ اسامی")
         root.geometry("410x375+750+225")
         root.resizable(False, False)
         root.configure(bg="lightblue")
@@ -97,7 +100,7 @@ def pass_word():
                         file.writelines(rem_line)
                         lines.sort()
                         msg_box = messagebox.showinfo("اخراج شد!", "کارمند با موفقیت اخراج شد!")
-                btn_3 = tk.Button(root_3, text="حذف", bg="lightyellow", font=("B Titr", 18), command=delete_name, width=600)
+                btn_3 = tk.Button(root_3, text="اخراج", bg="lightyellow", font=("B Titr", 18), command=delete_name, width=600)
                 btn_3.pack()
                 def exit_3():
                     root_3.destroy()
@@ -114,6 +117,6 @@ def pass_word():
     else:
         msg_box = messagebox.showinfo("خطا!", "رمز عبور اشتباه است!")
         root_4.destroy()
-btn_4 = tk.Button(root_4, text="ورود", bg="lightblue", font=("B Titr", 20), width=600, command=pass_word)
+btn_4 = tk.Button(root_4, text="ورود", bg="lightyellow", font=("B Titr", 20), width=600, command=pass_word)
 btn_4.pack()
 root_4.mainloop()
