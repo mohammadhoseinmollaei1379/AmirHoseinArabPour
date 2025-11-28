@@ -7,6 +7,14 @@ from time import sleep
 for i in tqdm(range(100), ascii="▒█", colour="cyan"):
     sleep(0.05)
 print("Starting New-Shell... [Version 1.3]")
+print("""
+     _   _                   ____  _          _ _
+    | \ | | _____      __   / ___|| |__   ___| | |
+    |  \| |/ _ \ \ /\ / /___\___ \| '_ \ / _ \ | |
+    | |\  |  __/\ V  V /_____|__) | | | |  __/ | |
+    |_| \_|\___| \_/\_/     |____/|_| |_|\___|_|_|
+
+""")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.3"
 while True:
