@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import messagebox
 pass_word_ = "123456"
+err_pass = 0
 root_4 = tk.Tk()
 root_4.geometry("200x150+900+200")
 root_4.configure(bg="lightblue")
@@ -9,14 +10,14 @@ root_4.title("ورود به برنامه")
 root_4.resizable(False, False)
 label_4 = tk.Label(root_4, text="رمز خود را وارد کنید", font=("B Nazanin", 18), bg="lightblue")
 label_4.pack()
-entry_4 = tk.Entry(root_4, width=75, font=("B Nazanin", 18))
+entry_4 = tk.Entry(root_4, width=75, font=("B Nazanin", 18), show="*")
 entry_4.pack()
 def sign_in():
     content_5 = entry_4.get().strip()
     if content_5 == pass_word_:
         return pass_word()
     else:
-        msg_box = messagebox.showinfo("خطا!", "رمز عبور اشتباه است!")
+        msg_box = messagebox.showerror("خطا!", "رمز عبور اشتباه است!")
         root_4.destroy()
 def pass_word():
     content_4 = entry_4.get()
@@ -106,6 +107,8 @@ def pass_word():
                     root_3.destroy()
                 btn_3_1 = tk.Button(root_3, text="خروج", bg="lightyellow", font=("B Titr", 18), command=exit_3, width=600)
                 btn_3_1.pack()
+            else:
+                msg_box_E = messagebox.showerror("خطا!", "لطفا گزینه مناسب را وارد کنید")
         btn = tk.Button(root, text="ثبت", bg="lightyellow", font=("B Titr", 18), command=click, width=600)
         btn.pack()
         def exit():
@@ -114,9 +117,13 @@ def pass_word():
         btn_1 = tk.Button(root, text="خروج", bg="lightyellow", font=("B Titr", 18), command=exit, width=600)
         btn_1.pack()
         root.mainloop()
-    else:
-        msg_box = messagebox.showinfo("خطا!", "رمز عبور اشتباه است!")
-        root_4.destroy()
+    elif content_4 != pass_word_:
+        if content_4 != pass_word_:
+            msg_box = messagebox.showerror("خطا!", "رمز عبور اشتباه است!")
+            global err_pass
+            err_pass += 1
+            if err_pass > 3:
+                root_4.destroy()
 btn_4 = tk.Button(root_4, text="ورود", bg="lightyellow", font=("B Titr", 20), width=600, command=pass_word)
 btn_4.pack()
 root_4.mainloop()
