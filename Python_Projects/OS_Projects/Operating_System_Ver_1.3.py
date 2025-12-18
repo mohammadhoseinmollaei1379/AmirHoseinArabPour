@@ -4,21 +4,21 @@ import shutil
 import datetime
 from tqdm import tqdm
 from time import sleep
+print("""
+ _   _                   ____  _          _ _ 
+| \ | | _____      __   / ___|| |__   ___| | |
+|  \| |/ _ \ \ /\ / /___\___ \| '_ \ / _ \ | |
+| |\  |  __/\ V  V /_____|__) | | | |  __/ | |
+|_| \_|\___| \_/\_/     |____/|_| |_|\___|_|_|
+""")
 for i in tqdm(range(100), ascii="▒█", colour="cyan"):
     sleep(0.05)
 print("Starting New-Shell... [Version 1.3]")
-print("""
-     _   _                   ____  _          _ _
-    | \ | | _____      __   / ___|| |__   ___| | |
-    |  \| |/ _ \ \ /\ / /___\___ \| '_ \ / _ \ | |
-    | |\  |  __/\ V  V /_____|__) | | | |  __/ | |
-    |_| \_|\___| \_/\_/     |____/|_| |_|\___|_|_|
-
-""")
 name_prompt = input("Please enter your prompt name :")
 Ver = "1.3"
 while True:
-    user_input = input(f"C:\\{name_prompt}>")
+    pth_1 = "C:"
+    user_input = input(f"{pth_1}\\{name_prompt}>")
     user_input = user_input.lower().replace(" ", "").replace("-", "")
     if user_input == "halt" or user_input == "shutdown":
         print("See you later...")
@@ -67,9 +67,13 @@ while True:
             print(help_color)
         else:
             print(Fore.WHITE + f"Sorry, this {color} is not supported.", help_color)
+    elif user_input == "e:" or user_input == "d:":
+        pth_1 = user_input.upper()
+        path = (f"{pth_1}\\")
+        user_input = input(f"{pth_1}\\{name_prompt}>")
     elif user_input.startswith("dir") or user_input.startswith("ls"):
         user_input_1 = (user_input[3:])
-        path = ("C:\\")
+        path = (f"{pth_1}\\")
         files = dirs = 0
         if not user_input_1 == "dir/?":
             with os.scandir(path) as entries:
@@ -126,7 +130,7 @@ while True:
         user_input = user_input
         user_input_2 = user_input[4:]
         if user_input_2 == "color":
-            print(help_color) # type: ignore
+            print(help_color)
         elif user_input_2 == "dir" or user_input_2 == "ls":
             print("Displays a list of files and subdirectories in a directory.")
         elif user_input_2 == "time" or user_input_2 == "time/?":
