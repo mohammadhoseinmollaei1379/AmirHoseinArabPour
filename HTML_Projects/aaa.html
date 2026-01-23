@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amir Hossein</title>
     <style>
+        h1::first-letter {
+            color: green;
+            font-size: 260px;
+        }
+        a:link {
+            color: blue;
+        }
+        a:hover {
+            color: green;
+            padding: inherit;
+        }
         .error {
             color: red;
             border: dotted;
@@ -14,30 +25,48 @@
             background-color: black;
             border: dotted;
         }
+
+        #good {
+            color: green;
+            background-color: greenyellow;
+            border: thin;
+        }
         h1 {
             font-family: "b titr";
+            text-shadow: 5px 3px orange;
         }
         p {
             font-family: "b yekan";
+            text-align: center;
+        }
+        p2 {
+            font-family: "b yekan";
+            text-align: center;
+            border: dashed;
         }
         body {
             direction: rtl;
             margin: 50px;
+            /* background: url("ax.jpg") repeat; */
         }
     </style>
 </head>
 <body>
-    <h1>
+    <h1 class="link, hover">
      سلام به حسن
     </h1>
+    <img src="www.aaa.com" alt="تصویری از محیط سیستم عامل amir OS" />
     <p class="error">
      سلام به حسن(با عصبانیت)
     </p>
     <p class="warning">
      سلام به حسن(با اخطار)
     </p>
-    <p>
+    <p id="good">
      سلام به حسن(با خوشحالی)
     </p>
+    <p2>
+      سلام به تو!
+    </p2>
 </body>
 </html>
