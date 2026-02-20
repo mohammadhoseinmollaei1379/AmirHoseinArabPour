@@ -151,7 +151,7 @@
 
 ;ROR RIGHT, ROL LEFT
 
-MOV BL, 11111110B
+;MOV BL, 11111110B
 ;ROR BL, 1           ;01111111 , CF = 0
 ;ROR BL, 1           ;10111111 , CF = 1
 
@@ -159,4 +159,58 @@ MOV BL, 11111110B
 ;ROR BL, CL
 ;ROR BL, 2
 
-ROL BL, 1           ;11111101 , CF = 1
+;ROL BL, 1           ;11111101 , CF = 1  
+;RCL , RCR   ÈÑÇí ÔíÝÊ Èå  æ ÔíÝÊ Èå ÑÇÓÊ ÇÒ ØÑíÞ ÑÞã äÞáí CARY
+
+;CLC    ;CF = 0
+
+;MOV AL, 11111111B
+;RCR AL, 1   ; AL = 01111111  CF = 1
+
+;CLC    ;CF = 0
+
+;MOV BL, 11111111B
+;RCL BL, 1   ; AL = 11111110  CF = 1
+;--------------------
+;CMP A, B
+;A = B : ZF = 1
+
+;A > B   CF = 0 , ZF = 0
+;A < B   CF = 1 , ZF = 0
+
+;MOV AX, 1234H
+;MOV BX, 1234H
+;CMP AX, BX   ZF = 1
+
+;MOV AX, 1234H
+;MOV BX, 25FEH
+;CMP AX, BX    CF = 1
+
+;--------------------
+
+;if(ch >= 'A') && (ch <= 'Z')
+;   cout << ch;
+
+;--------------------
+;AL = CH
+
+;CMP  AL, 'A'
+;JNGE Exit
+
+;CMP  AL, 'Z'
+;JNLE Exit
+
+;display character 
+
+;Exit:
+;    ret
+;--------------------
+
+    MOV CX, 10
+    
+    MOV AH, 2
+    MOV DL, '*'
+
+L:
+    INT  21H
+    Loop L
