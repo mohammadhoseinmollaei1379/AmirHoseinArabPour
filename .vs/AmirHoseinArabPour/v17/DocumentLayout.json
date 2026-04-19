@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\AmirHoseinArabPour\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AmirHoseinArabPour\\grade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:grade.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AmirHoseinArabPour\\C#_Projects\\amir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:C#_Projects\\amir.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "grade.cpp",
-              "DocumentMoniker": "D:\\AmirHoseinArabPour\\grade.cpp",
-              "RelativeDocumentMoniker": "grade.cpp",
-              "ToolTip": "D:\\AmirHoseinArabPour\\grade.cpp",
-              "RelativeToolTip": "grade.cpp",
+              "Title": "amir.cs",
+              "DocumentMoniker": "D:\\AmirHoseinArabPour\\C#_Projects\\amir.cs",
+              "RelativeDocumentMoniker": "C#_Projects\\amir.cs",
+              "ToolTip": "D:\\AmirHoseinArabPour\\C#_Projects\\amir.cs",
+              "RelativeToolTip": "C#_Projects\\amir.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-18T13:38:09.213Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T22:20:11.091Z",
               "EditorCaption": ""
             }
           ]

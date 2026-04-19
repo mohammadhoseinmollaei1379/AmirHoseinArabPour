@@ -20,47 +20,43 @@ entry.pack()
 
 def sabt():
     content = entry.get().strip()
+    score_bot = 0
+    score_gmr = 0
 
     bot = random.randint(1, 3)
-    if bot == 1:
-        bot = "سنگ"
-    elif bot == 2:
-        bot = "کاغذ"
-    elif bot == 3:
-        bot = "قیچی"
-    elif content == "سنگ" and bot == "سنگ":
+    if content == "سنگ" and bot == 1:
         score_bot = score_bot
         score_gmr = score_gmr
         msg = messagebox.showinfo("مساوی", "مساوی")
-    elif content == "سنگ" and bot == "کاغذ":
+    elif content == "سنگ" and bot == 2:
         score_bot += 1
         score_gmr = score_gmr
         msg = messagebox.showinfo("ربات برد", "ربات برد")
-    elif content == "سنگ" and bot == "قیچی":
+    elif content == "سنگ" and bot == 3:
         score_bot = score_bot
         score_gmr += 1
         msg = messagebox.showinfo("بازیکن برد", "بازیکن برد")
-    elif content == "کاغذ" and bot == "سنگ":
+    elif content == "کاغذ" and bot == 1:
         score_bot = score_bot
         score_gmr += 1
         msg = messagebox.showinfo("بازیکن برد", "بازیکن برد")
-    elif content == "کاغذ" and bot == "کاغذ":
+    elif content == "کاغذ" and bot == 2:
         score_bot = score_bot
         score_gmr = score_gmr
         msg = messagebox.showinfo("مساوی", "مساوی")
-    elif content == "کاغذ" and bot == "قیچی":
+    elif content == "کاغذ" and bot == 3:
         score_bot += 1
         score_gmr = score_gmr
         msg = messagebox.showinfo("ربات برد", "ربات برد")
-    elif content == "قیچی" and bot == "سنگ":
+    elif content == "قیچی" and bot == 1:
         score_bot += 1
         score_gmr = score_gmr
         msg = messagebox.showinfo("ربات برد", "ربات برد")
-    elif content == "قیچی" and bot == "کاغذ":
+    elif content == "قیچی" and bot == 2:
         score_bot = score_bot
         score_gmr += 1
         msg = messagebox.showinfo("ربات برد", "ربات برد")
-    elif content == "قیچی" and bot == "قیچی":
+    elif content == "قیچی" and bot == 3:
         score_bot = score_bot
         score_gmr = score_gmr
         msg = messagebox.showinfo("مساوی", "مساوی")

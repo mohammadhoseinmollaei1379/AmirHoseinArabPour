@@ -7,7 +7,7 @@ app.listen(port, function(){
 }) 
 
 app.get('/', function(req, res){
-    res.send('<h1>Welcome 🤣</h1> <marquee direction="right">سرور در حال اجرا است</marquee>');
+    res.send("aaa.html");
 })
 
 app.get('/api/hello/:name', function(req, res){

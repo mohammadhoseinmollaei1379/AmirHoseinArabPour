@@ -11,7 +11,5 @@ class Dog:
     def __str__(self):
         return f"{self.name}, {self.age} years old"
 
-
-
-dog1 = Dog.from_birth_year(2018, 21111)  
+dog1 = Dog.from_birth_year(2018, 2111)  
 print(dog1) 
