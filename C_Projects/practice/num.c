@@ -1,11 +1,11 @@
 #include<stdio.h>
-#include<wchar.h>
 
 float number(int a, int b, int c)
 {
-    float x = (a + b + c) / 3;
+    int x = a + b + c;
+    float y = x / 3;
 
-    return x;
+    return y;
 }
 
 int main()
@@ -20,7 +20,6 @@ int main()
     int num1 = 0;
     int num2 = 0;
     int num3 = 0;
-    float num4 = number(num1, num2, num3);
     printf("enter a number 1: ");
     scanf("%d", &num1);
     printf("enter a number 2: ");
@@ -28,6 +27,8 @@ int main()
     printf("enter a number 3: ");
     scanf("%d", &num3);
 
+
+    float num4 = number(num1, num2, num3);
     printf("meghdar nahaaei : %f", num4);
 
     return 0;

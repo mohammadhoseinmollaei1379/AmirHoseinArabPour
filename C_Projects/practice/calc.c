@@ -1,17 +1,19 @@
 #include<stdio.h>
 
-int mohasebeh(int a, int c, char b)
+int mohasebeh(int a, char b, int c)
 {
     if (b == '+')
     {
-        printf("%d", a + c);
+        int d = a + c;
+        printf("%d", d);
     }
     else if (b == '-')
     {
-        printf("%d", a - c);
+        int d = a - c;
+        printf("%d", d);
     }
     else{
-        printf("ERROR! %c is not defined!", b);
+        printf("ERROR! %c os not defined.", b);
     }
 }
 
@@ -32,13 +34,12 @@ int main()
 
     printf("enter a number 1 : ");
     scanf("%d", &n1);
-    printf("enter a char : ");
-    scanf("%c", &a);
     printf("enter a number 2 : ");
-    scanf("%d", &n2);
+    scanf("%d", &n2);    
+    printf("enter a char : ");
+    scanf(" %c", &a); // توی این خط از دیپ سیک کمک گرفتم چون تا سه روز درگیرش بودم و باید یه فاصله قبل از %c می‌ذاشتم🤯
 
-    int n3 = mohasebeh(n1, a, n2);
-    printf("hasel : %d", n3);
+    mohasebeh(n1, a, n2);
 
     return 0;
 }

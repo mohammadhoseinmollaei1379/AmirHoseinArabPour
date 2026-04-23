@@ -2,7 +2,7 @@
 
 char star(int a)
 {
-    for (int i = a; i > 1; i--)
+    for (int i = a; i > 0; i--)
     {
         printf("*");
     }
@@ -17,7 +17,7 @@ int main()
     printf("enter the num : ");
     scanf("%d", &st);
     
-    printf("%c", star(st));
+    star(st);
 
     return 0;
 }
