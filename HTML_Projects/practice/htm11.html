@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body dir="rtl">
+    <!-- <form action="">
+        Name : <br/>
+        <input type="text"> <br/>
+        Last Name : <br/>
+        <input type="text">
+    </form> -->
+    <fieldset>
+        <legend>ثبت نام</legend>
+        <form action="">
+            <table width="300" border="0" align="center">
+                <tr>
+                    <td width="150" align="left">
+                        نام کاربری :
+                    </td>
+                    <td>
+                        <input type="text" maxlength="20" size="20" placeholder="نام کاربری خود را وارد کنید">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        رمز عبور :
+                    </td>
+                    <td>
+                        <input type="password" maxlength="20" size="20" placeholder="رمز عبور خود را وارد کنید">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        ایمیل :
+                    </td>
+                    <td>
+                        <input type="email"  size="20" placeholder="ایمیل خود را وارد کنید">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left" valign="top">
+                        آدرس :
+                    </td>
+                    <td>
+                        <textarea rows="10" cols="20">
+
+                        </textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        جنسیت :
+                    </td>
+                    <td>
+                        <input type="radio" name="aaa">مرد
+                        <input type="radio" name="aaa">زن
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        شهر :
+                    </td>
+                    <td>
+                        <select width="50" height="50">
+                            <option selected>کرمان</option>
+                            <option>شیراز</option>
+                            <option>اصفهان</option>
+                            <option>کرمانشاه</option>
+                            <option>تهران</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        استان :
+                    </td>
+                    <td>
+                        <select width="50" height="100">
+                            <optgroup label="استان 1">
+                                <option>شهر 1 از استان 1</option>                        </optgroup>
+                                <option>شهر 2 از استان 1</option>                        </optgroup>
+                                <option>شهر 3 از استان 1</option>                        </optgroup>
+                            <optgroup label="استان 2">
+                                <option>شهر 1 از استان 2</option>                        </optgroup>
+                                <option>شهر 2 از استان 2</option>                        </optgroup>
+                                <option>شهر 3 از استان 2</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" align="left">
+                        علاقه‌مندی ها :
+                    </td>
+                    <td>
+                        <input type="checkbox">برنامه نویسی
+                        <input type="checkbox">فیلم دیدن
+                        <input type="checkbox" checked>ورزش کردن
+                        <input type="checkbox">موزیک گوش دادن
+                    </td>
+                </tr>
+                <tr>
+                    <td width="150" align="left">
+                        فایل :
+                    </td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="ثبت نام">
+                        <input type="reset" value="پاک کردن فرم">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
