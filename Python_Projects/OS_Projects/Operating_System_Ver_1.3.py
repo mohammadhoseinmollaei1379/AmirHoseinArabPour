@@ -6,16 +6,16 @@ from tqdm import tqdm
 from time import sleep
 print("""
  _   _                   ____  _          _ _ 
-| \ | | _____      __   / ___|| |__   ___| | |
-|  \| |/ _ \ \ /\ / /___\___ \| '_ \ / _ \ | |
-| |\  |  __/\ V  V /_____|__) | | | |  __/ | |
-|_| \_|\___| \_/\_/     |____/|_| |_|\___|_|_|
+| \\ | | _____      __   / ___|| |__   ___| | |
+|  \\| |/ _ \\ \\ /\\ / /___\\___ \\| '_ \\ / _ \\ | |
+| |\\  |  __/\\ V  V /_____|__) | | | |  __/ | |
+|_| \\_|\\___| \\_/\\_/     |____/|_| |_|\\___|_|_|
 """)
 for i in tqdm(range(100), ascii="▒█", colour="cyan"):
     sleep(0.05)
 print("Starting New-Shell... [Version 1.3]")
 name_prompt = input("Please enter your prompt name :")
-Ver = "1.3"
+ver = "1.3"
 while True:
     pth_1 = "C:"
     user_input = input(f"{pth_1}\\{name_prompt}>")
@@ -110,7 +110,7 @@ while True:
     elif user_input == "":
         pass
     elif user_input == "ver" or user_input == "version":
-        print(Ver)
+        print(ver)
     elif user_input == "time" or user_input == "time/t":
         time = datetime.datetime.now().time()
         print("The current time is :", time)
