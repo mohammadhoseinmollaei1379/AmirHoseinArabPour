@@ -22,7 +22,12 @@ while True:
     fpth_1 = f"C:\\{name_prompt_1}>"
     user_input = input(f"{fpth_1}")
     user_input = user_input.lower().replace(" ", "").replace("-", "")
-    if user_input == "poweroff" or user_input == "shutdown":
+    if user_input == "poweroff" or user_input == "shutdown" or user_input == "halt":
+        for i in tqdm(range(20),
+                     ascii="▒█", 
+                     colour="cyan"
+                     ):
+            sleep(0.05)    
         print("See you later...")
         break
     elif user_input == "cls" or user_input == "clear":
@@ -138,7 +143,8 @@ while True:
         if (name_prompt_buf == ".." or 
             name_prompt_buf == "." or 
             name_prompt_buf == "/" or 
-            name_prompt_buf == "\\"):
+            name_prompt_buf == "\\"
+            ):
             name_prompt_1 = name_prompt
         elif (name_prompt_buf == ""):
             fpth_buf = f"C:\\{name_prompt_1}"
