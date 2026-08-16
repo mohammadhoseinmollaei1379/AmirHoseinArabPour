@@ -1,7 +1,8 @@
 import os
-from colorama import init, Fore
 import shutil
 import datetime
+# import jdatetime
+from colorama import init, Fore
 from tqdm import tqdm
 from time import sleep
 print("""
@@ -15,10 +16,11 @@ for i in tqdm(range(100), ascii="▒█", colour="cyan"):
     sleep(0.05)
 print("Starting New-Shell... [Version 1.3]")
 name_prompt = input("Please enter your prompt name :")
+name_prompt_1 = name_prompt
 ver = "1.3"
 while True:
-    pth_1 = "C:"
-    user_input = input(f"{pth_1}\\{name_prompt}>")
+    fpth_1 = f"C:\\{name_prompt_1}>"
+    user_input = input(f"{fpth_1}")
     user_input = user_input.lower().replace(" ", "").replace("-", "")
     if user_input == "poweroff" or user_input == "shutdown":
         print("See you later...")
@@ -68,12 +70,12 @@ while True:
         else:
             print(Fore.RESET + f"Sorry, this {color} is not supported.", help_color)
     elif user_input == "e:" or user_input == "d:":
-        pth_1 = user_input.upper()
-        path = (f"{pth_1}\\")
-        user_input = input(f"{pth_1}\\{name_prompt}>")
+        fpth_1 = user_input.upper()
+        path = (f"{fpth_1}")
+        user_input = input(f"{fpth_1}{name_prompt_1}>")
     elif user_input.startswith("dir") or user_input.startswith("ls"):
         user_input_1 = (user_input[3:])
-        path = (f"{pth_1}\\")
+        path = (f"{fpth_1}")
         files = dirs = 0
         if not user_input_1 == "dir/?":
             with os.scandir(path) as entries:
@@ -104,9 +106,9 @@ while True:
             print("Folder does not exist.")
     elif user_input.startswith("newprompt") or user_input.startswith("prompt"):
         if user_input == "newprompt":
-            name_prompt = user_input[9:]
+            name_prompt_1 = user_input[9:]
         else:
-            name_prompt = user_input[6:]
+            name_prompt_1 = user_input[6:]
     elif user_input == "":
         pass
     elif user_input == "ver" or user_input == "version":
@@ -117,15 +119,32 @@ while True:
     elif user_input == "date":
         date = datetime.date.today()
         print("The current date is :", date)
+    # elif user_input == "jcal" or user_input == "jdate":
+    #     jdate = jdatetime.datetime.now()
     elif user_input.startswith("mkdir") or user_input.startswith("md"):
-        if user_input == "mkdir":
-            name_folder = user_input[5:]
-        else:
-            name_folder = user_input[2:]
-        os.mkdir(name_folder)
-        print("Folder created")
+        try:
+            if user_input == "mkdir":
+                name_folder = user_input[5:]
+            else:
+                name_folder = user_input[2:]
+            os.mkdir(name_folder)
+            print("Folder created.")
+        except FileNotFoundError as e:
+            print("Please enter the folder name.")
+        except FileExistsError as e:
+            print(f"A subdirectory {name_folder} already exists.")
     elif user_input.startswith("cd"):
-        name_prompt = user_input[2:]
+        name_prompt_buf = user_input[2:]
+        if (name_prompt_buf == ".." or 
+            name_prompt_buf == "." or 
+            name_prompt_buf == "/" or 
+            name_prompt_buf == "\\"):
+            name_prompt_1 = name_prompt
+        elif (name_prompt_buf == ""):
+            fpth_buf = f"C:\\{name_prompt_1}"
+            print(fpth_buf)
+        else:
+            name_prompt_1 = user_input[2:]
     elif user_input.startswith("help"):
         user_input = user_input
         user_input_2 = user_input[4:]
