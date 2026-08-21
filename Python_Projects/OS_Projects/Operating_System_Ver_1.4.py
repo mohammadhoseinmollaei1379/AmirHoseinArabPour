@@ -1,0 +1,191 @@
+import os
+import shutil
+import datetime
+# import jdatetime
+from colorama import init, Fore
+from tqdm import tqdm
+from time import sleep
+print("""
+ _   _                   ____  _          _ _ 
+| \\ | | _____      __   / ___|| |__   ___| | |
+|  \\| |/ _ \\ \\ /\\ / /___\\___ \\| '_ \\ / _ \\ | |
+| |\\  |  __/\\ V  V /_____|__) | | | |  __/ | |
+|_| \\_|\\___| \\_/\\_/     |____/|_| |_|\\___|_|_|
+""")
+for i in tqdm(range(100), ascii="▒█", colour="cyan"):
+    sleep(0.05)
+print("Starting New-Shell... [Version 1.3]")
+name_prompt = input("Please enter your prompt name :")
+name_prompt_1 = name_prompt
+ver = "1.3"
+while True:
+    fpth_1 = f"C:\\{name_prompt_1}>"
+    user_input = input(f"{fpth_1}")
+    user_input = user_input.lower().replace(" ", "").replace("-", "")
+    if user_input == "poweroff" or user_input == "shutdown" or user_input == "halt":
+        for i in tqdm(range(20),
+                     ascii="▒█", 
+                     colour="cyan"
+                     ):
+            sleep(0.05)    
+        print("See you later...")
+        break
+    elif (user_input == "cls" or 
+          user_input == "clear"
+          ):
+        os.system("cls")
+    elif (user_input.startswith("color")):
+        help_color = """1 = Blue           9 = Light Blue
+2 = Green          A = Light Green
+3 = Aqua           B = Light Aqua
+4 = Red            C = Light Red
+5 = Purple         D = Light Purple
+6 = Yellow         E = Light Yellow
+7 = White          F = Bright White"""
+        init()
+        color = user_input[5:]
+        if (color == "1"):
+            print(Fore.BLUE + "This is blue text")
+        elif (color == "2"):
+            print(Fore.GREEN + "This is green text")
+        elif (color == "3"):
+            print(Fore.CYAN + "This is aqua text")
+        elif (color == "4"):
+            print(Fore.RED + "This is red text")
+        elif (color == "5"):
+            print(Fore.MAGENTA + "This is purple text")
+        elif (color == "6"):
+            print(Fore.YELLOW + "This is yellow text")
+        elif (color == "7"):
+            print(Fore.RESET + "This is white text")
+        elif (color == "9"):
+            print(Fore.LIGHTBLUE_EX + "This is light blue text")
+        elif (color == "a"):
+            print(Fore.LIGHTGREEN_EX + "This is light green text")
+        elif (color == "b"):
+            print(Fore.LIGHTCYAN_EX + "This is light aqua text")
+        elif (color == "c"):
+            print(Fore.LIGHTRED_EX + "This is light red text")
+        elif (color == "d"):
+            print(Fore.LIGHTMAGENTA_EX + "This is light purple text")
+        elif (color == "e"):
+            print(Fore.LIGHTYELLOW_EX + "This is light yellow text")
+        elif (color == "f"):
+            print(Fore.LIGHTWHITE_EX + "This is bright white text")
+        elif (user_input == "color/?"):
+            print(help_color)
+        else:
+            print(Fore.RESET + f"Sorry, this {color} is not supported.", help_color)
+    elif (user_input == "e:" or 
+          user_input == "d:"
+          ):
+        fpth_1 = user_input.upper()
+        path = (f"{fpth_1}")
+        user_input = input(f"{fpth_1}{name_prompt_1}>")
+    elif (user_input.startswith("dir") or 
+          user_input.startswith("ls")
+          ):
+        user_input_1 = (user_input[3:])
+        path = (f"{fpth_1}")
+        files = dirs = 0
+        if (not user_input_1 == "dir/?"):
+            with os.scandir(path) as entries:
+                for entry in entries:
+                    if entry.is_file():
+                        files += 1
+                    elif entry.is_dir():
+                        dirs += 1
+        elif (user_input == "dir/?"):
+            print("Displays a list of files and subdirectories in a directory.")
+        print(f"folders : {dirs}, files : {files}")
+    elif (user_input.startswith("echo")):
+        print(user_input[4:])
+    elif (user_input == "copycon"):
+        input_1 = input()
+        print(input_1)
+    elif (user_input == "rd" or 
+          user_input == "rm" or 
+          user_input == "removeitem"
+          ):
+        folder_path = input("Please enter the directory or file name :")
+        if (os.path.exists(folder_path)):
+            confirm = input(
+                f"Are you sure you want to delete the folder '{folder_path}'? (Y/N): ").strip().lower()
+            if (confirm == "y"):
+                shutil.rmtree(folder_path)
+                print("Folder deleted successfully.")
+            else:
+                print("Deletion canceled.")
+        else:
+            print("Folder does not exist.")
+    elif (user_input.startswith("newprompt") or 
+          user_input.startswith("prompt")
+          ):
+        if (user_input == "newprompt"):
+            name_prompt_1 = user_input[9:]
+        else:
+            name_prompt_1 = user_input[6:]
+    elif (user_input == ""):
+        pass
+    elif (user_input == "ver" or 
+          user_input == "version"
+          ):
+        print(ver)
+    elif (user_input == "time" or 
+          user_input == "time/t"
+          ):
+        time = datetime.datetime.now().time()
+        print("The current time is :", time)
+    elif (user_input == "date"):
+        date = datetime.date.today()
+        print("The current date is :", date)
+    # elif (user_input == "jcal" or 
+    # user_input == "jdate"
+    # ):
+    #     jdate = jdatetime.datetime.now()
+    elif (user_input.startswith("mkdir") or 
+          user_input.startswith("md")
+          ):
+        try:
+            if (user_input == "mkdir"):
+                name_folder = user_input[5:]
+            else:
+                name_folder = user_input[2:]
+            os.mkdir(name_folder)
+            print("Folder created.")
+        except FileNotFoundError as e:
+            print("Please enter the folder name.")
+        except FileExistsError as e:
+            print(f"A subdirectory {name_folder} already exists.")
+    elif user_input.startswith("cd"):
+        name_prompt_buf = user_input[2:]
+        if (name_prompt_buf == ".." or 
+            name_prompt_buf == "." or 
+            name_prompt_buf == "/" or 
+            name_prompt_buf == "\\"
+            ):
+            name_prompt_1 = name_prompt
+        elif (name_prompt_buf == ""):
+            fpth_buf = f"C:\\{name_prompt_1}"
+            print(fpth_buf)
+        else:
+            name_prompt_1 = user_input[2:]
+    elif user_input.startswith("help"):
+        user_input = user_input
+        user_input_2 = user_input[4:]
+        if user_input_2 == "color":
+            print(help_color)
+        elif user_input_2 == "dir" or user_input_2 == "ls":
+            print("Displays a list of files and subdirectories in a directory.")
+        elif user_input_2 == "time" or user_input_2 == "time/?":
+            print("Displays system time.")
+        elif user_input_2 == "date" or user_input_2 == "date/?":
+            print("Displays system date.")
+        elif user_input_2 == "cls":
+            print("Clears the screen.")
+        elif user_input_2 == "echo" or user_input_2 == "copycon":
+            print("Displays messages, or turns command-echoing on or off.")
+        elif user_input_2 == "md" or user_input_2 == "mkdir":
+            print("Creates a directory.")
+    else:
+        print("Command not found. please try 'Help'")
